@@ -1,0 +1,27 @@
+.ant-col {
+    margin-bottom: 20px;
+
+    .col-content {
+        text-align: center;
+
+        img {
+            max-width: 70%;
+        }
+    }
+}
+
+nz-input-group {
+    width: 90%;
+}
+
+@media screen and (min-width: 760px) {
+    nz-list {
+        -webkit-columns: 3;
+        -moz-columns: 3;
+        columns: 3;
+    }
+
+    nz-input-group {
+        width: 70%;
+    }
+}

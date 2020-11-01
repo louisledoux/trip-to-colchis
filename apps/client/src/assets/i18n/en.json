@@ -1,0 +1,11 @@
+{
+    "APP": {
+        "Title": "Trip to Colchis"
+    },
+
+    "LIST": {
+        "Title": "Add an argonaut",
+        "Add": "Add",
+        "Crew": "Crew members"
+    }
+}

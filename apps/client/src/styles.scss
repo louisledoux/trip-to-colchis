@@ -1,1 +1,12 @@
 /* You can add global styles to this file, and also import other style files */
+@import "~ng-zorro-antd/ng-zorro-antd.compact.css";
+
+trip-to-colchis-root {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+}
+
+nz-content {
+    flex: 1 0 auto;
+}

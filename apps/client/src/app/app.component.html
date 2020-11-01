@@ -1,8 +1,22 @@
-<div style="text-align: center;">
-  <h1>Welcome to client!</h1>
-  <img
-    width="450"
-    src="https://raw.githubusercontent.com/nrwl/nx/master/images/nx-logo.png"
-  />
-</div>
-<div>Message: {{ hello$ | async | json }}</div>
+<nz-layout>
+  <nz-header>
+    <h1>
+      <img src="assets/img/logo.png" alt="Logo" />&nbsp; {{ 'APP.Title' | translate }}
+    </h1>
+  </nz-header>
+
+  <nz-content>
+    <div class="inner-content">
+      <router-outlet></router-outlet>
+    </div>
+  </nz-content>
+
+  <nz-footer>
+    Louis Ledoux - 2020 &nbsp; - &nbsp;
+    <nz-select [(ngModel)]="language" (ngModelChange)="updateLanguage()">
+      <nz-option nzValue="fr" nzLabel="Français"></nz-option>
+      <nz-option nzValue="en" nzLabel="English"></nz-option>
+      <nz-option nzValue="gr" nzLabel="ελληνικά"></nz-option>
+    </nz-select>
+  </nz-footer>
+</nz-layout>

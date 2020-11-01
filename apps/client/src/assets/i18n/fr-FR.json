@@ -1,0 +1,11 @@
+{
+    "APP": {
+        "Title": "Voyage pour Colchide"
+    },
+
+    "LIST": {
+        "Title": "Ajouter un.e argonaute",
+        "Add": "Ajouter",
+        "Crew": "Membres de l'équipage"
+    }
+}

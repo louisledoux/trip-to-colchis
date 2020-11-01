@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
-import { Message } from '@trip-to-colchis/api-interfaces';
+import { TranslateService } from '@ngx-translate/core';
+
+// import { Message } from '@trip-to-colchis/api-interfaces';
 
 @Component({
   selector: 'trip-to-colchis-root',
@@ -8,6 +9,14 @@ import { Message } from '@trip-to-colchis/api-interfaces';
   styleUrls: ['./app.component.scss'],
 })
 export class AppComponent {
-  hello$ = this.http.get<Message>('/api/hello');
-  constructor(private http: HttpClient) {}
+
+  public language = 'fr';
+
+  constructor(private translate: TranslateService) {
+    translate.setDefaultLang(this.language);
+  }
+
+  updateLanguage() {
+    this.translate.use(this.language);
+  }
 }
