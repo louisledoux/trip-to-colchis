@@ -8,5 +8,4 @@ Little project to practice. Firebase Edition.
 
 ### Live Development Server
 
-* Environment files have to be added manually / asked so the Firebase link can work.
 * Simply run `nx serve client` at root to start the client server with file watcher.
