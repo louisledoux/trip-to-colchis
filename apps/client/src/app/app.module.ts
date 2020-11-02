@@ -14,6 +14,9 @@ import { NzSelectModule } from 'ng-zorro-antd/select';
 
 import { AppRoutingModule } from './app-routing.module';
 
+import { AngularFireModule } from '@angular/fire';
+import { environment } from '../environments/environment';
+
 @NgModule({
   declarations: [AppComponent],
   imports: [
@@ -21,6 +24,8 @@ import { AppRoutingModule } from './app-routing.module';
     BrowserAnimationsModule,
     FormsModule,
     HttpClientModule,
+
+    AngularFireModule.initializeApp(environment.firebase),
 
     TranslateModule.forRoot({
       loader: {

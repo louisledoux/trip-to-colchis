@@ -1,5 +1,5 @@
 <div nz-row [nzGutter]="{ xs: 8, sm: 16, md: 24, lg: 32 }">
-    <div nz-col [nzLg]="{ span: 6, offset: 0 }" [nzMd]="{ span: 12, offset: 6 }" [nzSm]="{ span: 12, offset: 0 }" [nzXs]="{ span: 24, offset: 0 }">
+    <div nz-col [nzLg]="{ span: 6, offset: 0 }" [nzMd]="{ span: 12, offset: 6 }" [nzSm]="{ span: 12, offset: 6 }" [nzXs]="{ span: 24, offset: 0 }">
         <div class="col-content">
             <nz-space nzDirection="vertical">
                 <nz-space-item>
@@ -9,28 +9,24 @@
                     <h2>{{ 'LIST.Title' | translate }}</h2>
                 </nz-space-item>
                 <nz-space-item>
-                    <nz-input-group nzSearch nzSize="large" [nzAddOnAfter]="sendButton">
-                        <input type="text" nz-input placeholder="Chiron" />
-                      </nz-input-group>
-                      <ng-template #sendButton>
-                        <button nz-button nzType="primary" nzSize="large" nzSearch>{{ 'LIST.Add' | translate }}</button>
-                      </ng-template>
+                    <form (ngSubmit)="addArgonaut()">
+                        <nz-input-group nzSearch nzSize="large" [nzAddOnAfter]="sendButton">
+                            <input [(ngModel)]="argonautName" [formControl]="argonautInput" type="text" nz-input placeholder="{{ 'LIST.Placeholder' | translate }}" />
+                        </nz-input-group>
+                        <ng-template #sendButton>
+                            <button nz-button type="submit" nzType="primary" nzSize="large" nzSearch>{{ 'LIST.Add' | translate }}</button>
+                        </ng-template>
+                    </form>
                 </nz-space-item>
             </nz-space>
         </div>
     </div>
-    <div nz-col [nzLg]="{ span: 18, offset: 0 }" [nzMd]="{ span: 24, offset: 0 }" [nzSm]="{ span: 12, offset: 0 }" [nzXs]="{ span: 24, offset: 0 }">
+    <div nz-col [nzLg]="{ span: 18, offset: 0 }" [nzMd]="{ span: 24, offset: 0 }" [nzSm]="{ span: 24, offset: 0 }" [nzXs]="{ span: 24, offset: 0 }">
         <div class="col-content">
             <h2>{{ 'LIST.Crew' | translate }}</h2>
             <nz-list>
-                <nz-list-item>
-                    Test 1
-                </nz-list-item>
-                <nz-list-item>
-                    Test 1
-                </nz-list-item>
-                <nz-list-item>
-                    Test 1
+                <nz-list-item *ngFor="let argonaut of argonauts | async" >
+                    {{ argonaut.name }}
                 </nz-list-item>
             </nz-list>
         </div>

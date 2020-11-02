@@ -14,13 +14,15 @@ nz-input-group {
     width: 90%;
 }
 
-@media screen and (min-width: 760px) {
+@media screen and (min-width: 575px) {
     nz-list {
         -webkit-columns: 3;
         -moz-columns: 3;
         columns: 3;
     }
+}
 
+@media screen and (min-width: 1250px) {
     nz-input-group {
         width: 70%;
     }

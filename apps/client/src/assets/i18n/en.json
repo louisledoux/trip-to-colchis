@@ -6,6 +6,7 @@
     "LIST": {
         "Title": "Add an argonaut",
         "Add": "Add",
+        "Placeholder": "Ajax",
         "Crew": "Crew members"
     }
 }

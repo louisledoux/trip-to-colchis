@@ -6,6 +6,7 @@
     "LIST": {
         "Title": "Ajouter un.e argonaute",
         "Add": "Ajouter",
+        "Placeholder": "Ajax",
         "Crew": "Membres de l'équipage"
     }
 }

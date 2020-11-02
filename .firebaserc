@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "trip-to-colchis": {
+      "hosting": {
+        "client": [
+          "trip-to-colchis"
+        ]
+      }
+    }
+  }
+}

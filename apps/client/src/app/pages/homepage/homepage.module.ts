@@ -10,6 +10,9 @@ import { NzButtonModule } from 'ng-zorro-antd/button';
 import { NzInputModule } from 'ng-zorro-antd/input';
 import { TranslateModule } from '@ngx-translate/core';
 
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { AngularFirestoreModule } from '@angular/fire/firestore';
+
 const routes: Routes = [{
   path: '',
   component: HomepageComponent
@@ -19,7 +22,11 @@ const routes: Routes = [{
   declarations: [HomepageComponent],
   imports: [
     CommonModule,
+    FormsModule,
+    ReactiveFormsModule,
     TranslateModule,
+
+    AngularFirestoreModule,
 
     NzGridModule,
     NzListModule,
